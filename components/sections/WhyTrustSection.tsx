@@ -35,7 +35,7 @@ export default function WhyTrustSection() {
   ];
 
   return (
-    <SectionWrapper className="py-20 bg-white">
+    <SectionWrapper className="overflow-hidden py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* White banner at top */}
         <FadeInUp delay={0.2}>

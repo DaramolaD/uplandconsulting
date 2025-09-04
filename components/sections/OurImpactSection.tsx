@@ -33,7 +33,7 @@ export default function OurImpactSection() {
   ];
 
   return (
-    <SectionWrapper className="py-20 bg-white">
+    <SectionWrapper className="overflow-hidden py-20 bg-white">
       <div className="container mx-auto px-4">
         <FadeInUp delay={0.2}>
           <div className="text-center mb-16">
