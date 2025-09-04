@@ -1,10 +1,10 @@
 import SectionHeader from "@/components/sections/SectionHeader";
 import ImageSection from "@/components/ui/ImageSection";
+import { FadeInUp, StaggerContainer, ScaleIn, SectionWrapper, SlideInFromLeft, SlideInFromRight } from "@/components/animations";
 
 import marketStrategy from "@/public/marketStrategy.png";
 import executiveLevelInsight from "@/public/executiveInsight.png";
 import complianceTechnicalRigor from "@/public/complianceTechnicalRigor.png";
-import costEfficiency from "@/public/costEfficiency.png";
 
 export default function WhyTrustSection() {
   const contentBlocks = [
@@ -35,62 +35,71 @@ export default function WhyTrustSection() {
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <SectionWrapper className="py-20 bg-white">
       <div className="container mx-auto px-4">
         {/* White banner at top */}
-        <div className="text-center mb-20">
-          <div className="inline-block bg-[#EBEBEB] text-gray-900 px-6 py-3 rounded-lg font-medium text-lg mb-8">
-            Trusted Guidance. Proven Impact.
+        <FadeInUp delay={0.2}>
+          <div className="text-center mb-20">
+            <div className="inline-block bg-[#EBEBEB] text-gray-900 px-6 py-3 rounded-lg font-medium text-lg mb-8">
+              Trusted Guidance. Proven Impact.
+            </div>
+            <SectionHeader variant="dark">
+              Why Organizations Trust Upland
+            </SectionHeader>
           </div>
-          <SectionHeader variant="dark">
-            Why Organizations Trust Upland
-          </SectionHeader>
-        </div>
+        </FadeInUp>
 
         {/* Content blocks */}
-        <div className="space-y-16">
+        <StaggerContainer className="space-y-16">
           {contentBlocks.map((block, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-lg border border-gray-200 overflow-hidden"
-            >
-              <div className={`grid lg:grid-cols-2 items-center ${
-                block.imagePosition === "left" ? "lg:grid-flow-col-dense" : ""
-              }`}>
-                {/* Text content */}
-                <div className={`p-8 ${block.imagePosition === "left" ? "lg:col-start-2" : ""}`}>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 font-serif">
-                    {block.title}
-                  </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                    {block.description}
-                  </p>
-                  
-                  {/* Call to action */}
-                  <a
-                    href="#"
-                    className="text-blue-600 hover:text-blue-700 decoration-1 underline font-medium text-lg inline-flex items-center"
-                  >
-                    {block.linkText}
-                    <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
+            <ScaleIn key={index} delay={index * 0.3}>
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <div className={`grid lg:grid-cols-2 items-center ${
+                  block.imagePosition === "left" ? "lg:grid-flow-col-dense" : ""
+                }`}>
+                  {/* Text content */}
+                  <div className={`p-8 ${block.imagePosition === "left" ? "lg:col-start-2" : ""}`}>
+                    <SlideInFromLeft delay={0.1}>
+                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 font-serif">
+                        {block.title}
+                      </h3>
+                    </SlideInFromLeft>
+                    <SlideInFromLeft delay={0.2}>
+                      <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                        {block.description}
+                      </p>
+                    </SlideInFromLeft>
+                    
+                    {/* Call to action */}
+                    <SlideInFromLeft delay={0.3}>
+                      <a
+                        href="#"
+                        className="text-blue-600 hover:text-blue-700 decoration-1 underline font-medium text-lg inline-flex items-center"
+                      >
+                        {block.linkText}
+                        <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    </SlideInFromLeft>
+                  </div>
 
-                {/* Image */}
-                <div className={`${block.imagePosition === "left" ? "lg:col-start-1" : ""}`}>
-                  <ImageSection
-                    src={block.imageSrc}
-                    alt={block.imageAlt}
-                    className="aspect-[4/3] w-full h-full"
-                  />
+                  {/* Image */}
+                  <SlideInFromRight delay={0.2}>
+                    <div className={`${block.imagePosition === "left" ? "lg:col-start-1" : ""}`}>
+                      <ImageSection
+                        src={block.imageSrc}
+                        alt={block.imageAlt}
+                        className="aspect-[4/3] w-full h-full"
+                      />
+                    </div>
+                  </SlideInFromRight>
                 </div>
               </div>
-            </div>
+            </ScaleIn>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

@@ -6,6 +6,7 @@ import EniLogo from "@/public/eni.png";
 import FolawiyoAjeLogo from "@/public/folawiyoAjeServicesLimited.png";
 import NPDCLogo from "@/public/npdc.png";
 import Image from "next/image";
+import { FadeInUp, SectionWrapper } from "@/components/animations";
 
 export default function TrustedBySection() {
   const companies = [
@@ -40,18 +41,20 @@ export default function TrustedBySection() {
   ];
 
   return (
-    <section className="py-20 bg-blue-50 relative overflow-hidden">
+    <SectionWrapper className="py-20 bg-blue-50 relative overflow-hidden">
       {/* Side gradients */}
       <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent"></div>
       <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent"></div>
 
       <div className="container mx-auto px-4 relative">
         {/* Heading */}
-        <div className="text-center mb-16">
-          <h2 className="text-2xl md:text-3xl text-gray-800 font-medium">
-            Trusted by leading energy and public sector organizations.
-          </h2>
-        </div>
+        <FadeInUp delay={0.2}>
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-3xl text-gray-800 font-medium">
+              Trusted by leading energy and public sector organizations.
+            </h2>
+          </div>
+        </FadeInUp>
 
                       {/* Company logos carousel */}
               <div className="relative overflow-hidden">
@@ -96,6 +99,6 @@ export default function TrustedBySection() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }
