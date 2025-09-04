@@ -1,6 +1,4 @@
 import SectionHeader from "@/components/sections/SectionHeader";
-import SectionTag from "@/components/sections/SectionTag";
-import ContentCard from "@/components/sections/ContentCard";
 import ImageSection from "@/components/ui/ImageSection";
 import { FadeInUp, StaggerContainer, ScaleIn, SectionWrapper, SlideInFromLeft, SlideInFromRight } from "@/components/animations";
 

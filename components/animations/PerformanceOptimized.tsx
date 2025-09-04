@@ -1,12 +1,11 @@
 'use client';
 
 import { motion, MotionProps } from 'framer-motion';
-import { ReactNode, useMemo } from 'react';
+import { ReactNode } from 'react';
 
 interface PerformanceOptimizedProps extends Omit<MotionProps, 'children'> {
   children: ReactNode;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
 }
 
 /**
@@ -19,27 +18,20 @@ interface PerformanceOptimizedProps extends Omit<MotionProps, 'children'> {
 export default function PerformanceOptimized({
   children,
   className = '',
-  as = 'div',
   ...motionProps
 }: PerformanceOptimizedProps) {
-  const optimizedProps = useMemo(() => ({
-    ...motionProps,
-    style: {
-      ...motionProps.style,
-      willChange: 'transform, opacity',
-      backfaceVisibility: 'hidden',
-      perspective: 1000,
-    },
-  }), [motionProps]);
-
-  const MotionComponent = motion[as];
-
   return (
-    <MotionComponent
-      {...optimizedProps}
-      className={className}
+    <motion.div
+      {...motionProps}
+      className={`${className} animate-scroll`}
+      style={{
+        ...motionProps.style,
+        willChange: 'transform, opacity',
+        backfaceVisibility: 'hidden',
+        perspective: 1000,
+      }}
     >
       {children}
-    </MotionComponent>
+    </motion.div>
   );
 }
