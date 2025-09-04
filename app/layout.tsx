@@ -100,7 +100,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${forum.variable} ${dmSans.variable} antialiased`}>
+      <body className={`overflow-x-hidden ${forum.variable} ${dmSans.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
