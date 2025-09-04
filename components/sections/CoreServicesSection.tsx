@@ -39,7 +39,7 @@ export default function CoreServicesSection() {
   ];
 
   return (
-    <SectionWrapper className="pt-20 pb-24 bg-gray-900">
+    <SectionWrapper className="overflow-hidden pt-20 pb-24 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* White banner at top */}
         <FadeInUp delay={0.2}>

@@ -124,7 +124,7 @@ export default function ServicesPage() {
           __html: JSON.stringify(servicesPageStructuredData)
         }}
       />
-      <main className="min-h-screen">
+      <main className="overflow-hidden min-h-screen">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center" style={{ backgroundColor: '#132A4D' }}>
           <div className="container mx-auto py-40 px-4 relative z-10">

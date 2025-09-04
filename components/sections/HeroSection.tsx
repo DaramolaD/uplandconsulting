@@ -7,7 +7,7 @@ import heroBg from "@/public/heroBg.png"
 
 export default function HeroSection() {
   return (
-    <section className="relative lg:min-h-screen flex flex-col lg:flex-row">
+    <section className="overflow-hidden relative lg:min-h-screen flex flex-col lg:flex-row">
       {/* Left side - Dark blue background with content */}
       
       <div className="w-full lg:w-1/2 flex items-center" style={{ backgroundColor: '#132A4D' }}>

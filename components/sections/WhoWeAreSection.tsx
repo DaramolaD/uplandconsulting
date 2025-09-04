@@ -34,7 +34,7 @@ export default function WhoWeAreSection() {
   ];
 
   return (
-    <SectionWrapper className="py-20 bg-blue-50">
+    <SectionWrapper className="overflow-hidden py-20 bg-blue-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 items-center gap-12">
           <SlideInFromLeft delay={0.2}>

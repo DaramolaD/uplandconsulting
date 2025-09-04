@@ -24,7 +24,7 @@ export default function TestimonialsSection() {
   ];
 
   return (
-    <SectionWrapper className="py-20 bg-gray-50">
+    <SectionWrapper className="overflow-hidden py-20 bg-gray-50">
       <div className="container mx-auto px-4">
                  <FadeInUp delay={0.2}>
            <div className="text-center mb-16">
