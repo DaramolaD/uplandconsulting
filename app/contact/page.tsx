@@ -1,5 +1,3 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import SectionTag from "@/components/sections/SectionTag";
 import SectionHeader from "@/components/sections/SectionHeader";
 import { Button } from "@/components/ui/button";

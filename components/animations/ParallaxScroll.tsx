@@ -12,7 +12,7 @@ interface ParallaxScrollProps {
 
 export default function ParallaxScroll({
   children,
-  speed = 0.5,
+  // speed = 0.5,
   className = '',
   direction = 'up'
 }: ParallaxScrollProps) {
