@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TypewriterText } from "@/components/animations";
 
 export default function Footer() {
   return (
@@ -74,7 +75,14 @@ export default function Footer() {
             </div>
             {/* Upland branding */}
             <div className="mt-12 mb-8 text-center">
-              <span className="text-white font-bold text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif tracking-wide">Upland</span>
+              <TypewriterText
+                text="Upland"
+                speed={100}
+                delay={500}
+                className="text-white font-normal text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-serif tracking-wide"
+                showCursor={true}
+                cursorChar="|"
+              />
             </div>
           </div>
         </div>
