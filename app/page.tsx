@@ -7,6 +7,8 @@ import {
   WhoWeAreSection,
   IndustriesWeServeSection,
   TestimonialsSection,
+  OurPurposeApproachSection,
+  EnhancedServicesSection,
 } from "@/components/sections";
 import CoreServicesSection from "@/components/sections/CoreServicesSection";
 
@@ -25,14 +27,20 @@ export default function Home() {
       {/* Who We Are Section - Company story & values */}
       <WhoWeAreSection />
 
+      {/* Our Purpose & Approach Section - Company background and approach */}
+      {/* <OurPurposeApproachSection /> */}
+
       {/* Industries We Serve Section - Specialization */}
       <IndustriesWeServeSection />
 
       {/* Why Organizations Trust Upland Section - Problem/solution */}
       <WhyTrustSection />
 
+      {/* Enhanced Services Section - Comprehensive service offerings */}
+      <EnhancedServicesSection />
+
       {/* Core Services Section - What we do */}
-      <CoreServicesSection />
+      {/* <CoreServicesSection /> */}
 
       {/* Testimonials Section - Social proof & credibility */}
       <TestimonialsSection />

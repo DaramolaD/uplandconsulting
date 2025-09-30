@@ -50,27 +50,26 @@ export default function TrustedBySection() {
         {/* Heading */}
         <FadeInUp delay={0.2}>
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl text-gray-800 font-medium">
+            <h2 className="text-2xl md:text-2xl text-gray-800 font-medium">
               Trusted by leading energy and public sector organizations.
             </h2>
           </div>
         </FadeInUp>
 
-                      {/* Company logos carousel */}
-              <div className="relative overflow-hidden">
-                {/* Left fog effect - positioned at the very start */}
-                <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none"></div>
+        {/* Company logos carousel */}
+        <div className="relative overflow-hidden">
+          {/* Left fog effect - positioned at the very start */}
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-100 to-transparent z-10 pointer-events-none"></div>
 
-                {/* Right fog effect - positioned at the very end */}
-                <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none"></div>
+          {/* Right fog effect - positioned at the very end */}
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-100 to-transparent z-10 pointer-events-none"></div>
 
-                <div className="relative flex animate-scroll">
-
+          <div className="relative flex animate-scroll">
             {/* First set of logos */}
             {companies.map((company, index) => (
               <div
                 key={`first-${index}`}
-                className="flex items-center justify-center h-20 w-32 mx-8 flex-shrink-0 hover:scale-105 transition-transform duration-200"
+                className="flex items-center justify-center h-16 w-28 mx-8 flex-shrink-0 hover:scale-105 transition-transform duration-200"
               >
                 <Image
                   src={company.logo}
