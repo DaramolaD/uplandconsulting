@@ -38,6 +38,78 @@ export default function IndustriesWeServeSection() {
       ],
       icon: "🏛️",
       color: "from-green-600 to-green-800"
+    },
+    {
+      title: "Maritime & Ports",
+      description: "Port operations, marine logistics, and maritime infrastructure solutions",
+      services: [
+        "Port Management Systems",
+        "Marine Vessel Operations",
+        "Cargo Handling Optimization",
+        "Harbor Security Solutions"
+      ],
+      icon: "🚢",
+      color: "from-cyan-600 to-blue-600"
+    },
+    {
+      title: "Renewable Energy",
+      description: "Clean energy projects and sustainable infrastructure development",
+      services: [
+        "Solar & Wind Projects",
+        "Energy Storage Solutions",
+        "Grid Integration",
+        "Sustainability Consulting"
+      ],
+      icon: "🌱",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      title: "Manufacturing",
+      description: "Industrial manufacturing and production optimization solutions",
+      services: [
+        "Process Optimization",
+        "Quality Management",
+        "Supply Chain Integration",
+        "Automation Solutions"
+      ],
+      icon: "🏭",
+      color: "from-gray-600 to-gray-800"
+    },
+    {
+      title: "Telecommunications",
+      description: "Telecom infrastructure, network optimization, and communication solutions",
+      services: [
+        "Network Design & Deployment",
+        "5G Implementation",
+        "Fiber Optic Networks",
+        "Satellite Communications"
+      ],
+      icon: "📡",
+      color: "from-purple-600 to-indigo-600"
+    },
+    {
+      title: "Agriculture & Food",
+      description: "Agricultural technology and food processing industry solutions",
+      services: [
+        "Precision Agriculture",
+        "Food Safety Systems",
+        "Supply Chain Management",
+        "IoT Integration"
+      ],
+      icon: "🌾",
+      color: "from-yellow-600 to-orange-500"
+    },
+    {
+      title: "Healthcare",
+      description: "Healthcare technology and medical infrastructure solutions",
+      services: [
+        "Health Information Systems",
+        "Medical Device Integration",
+        "Patient Data Management",
+        "Telemedicine Solutions"
+      ],
+      icon: "🏥",
+      color: "from-red-500 to-pink-600"
     }
   ];
 
@@ -58,7 +130,7 @@ export default function IndustriesWeServeSection() {
            </div>
          </FadeInUp>
 
-        <StaggerContainer className="grid md:grid-cols-3 gap-8">
+        <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <ScaleIn key={index} delay={index * 0.2}>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">

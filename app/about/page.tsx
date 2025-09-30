@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Award, Users, Target, Shield } from "lucide-react";
 import { FadeInUp, StaggerContainer, ScaleIn, SlideInFromLeft, SlideInFromRight, SectionWrapper } from "@/components/animations";
 import { createWebPageStructuredData } from "@/components/seo/StructuredData";
+import OurPurposeApproachSection from "@/components/sections/OurPurposeApproachSection";
 
 // Import images
 import teamImage from "@/public/marketStrategy.png";
@@ -80,22 +81,52 @@ export default function AboutPage() {
 
   const leadership = [
     {
-      name: "Sarah Johnson",
-      role: "Chief Executive Officer",
-      bio: "Former McKinsey partner with 20+ years in energy sector strategy and operations.",
-      image: "/team-1.jpg"
+      name: "Dr. Bola O. Awobamise, Ph D",
+      role: "President and Chief Executive Officer",
+      bio: "Dr. Awobamise has twenty years of experience in business and technology, with extensive experience leading strategy, financial management, and project management teams on large-scale integration projects globally in healthcare, utilities, oil & gas, transportation, and advertising industries. He holds an MBA from the University of Minnesota and a Ph.D. in Electrical Engineering from UMIST, Manchester, UK.",
+      image: "/team/bola.jpg"
     },
     {
-      name: "Michael Chen",
-      role: "Chief Technology Officer",
-      bio: "Technology leader with expertise in digital transformation and regulatory compliance systems.",
-      image: "/team-2.jpg"
+      name: "Kathleen M. Pytleski, MBA",
+      role: "Executive Vice President and CFO",
+      bio: "Ms. Pytleski has over twenty years of experience specializing in strategic business development. She has led the creation of new businesses, opened new markets, and formed strategic alliances for several multi-national corporations across multiple industries. She holds an MBA from the University of Minnesota, serves as a board member with Liberty Enterprises, Inc., and is involved with several non-profit and professional organizations.",
+      image: "/team/kathleen.jpg"
     },
     {
-      name: "Dr. Emily Rodriguez",
-      role: "Head of Compliance",
-      bio: "Former regulatory affairs director with deep expertise in energy and utilities compliance.",
-      image: "/team-3.jpg"
+      name: "Janice M. Wade",
+      role: "Vice President, Consulting Services",
+      bio: "Ms. Wade has twenty-two years of leadership, strategy, and technology experience in the banking, financial services, and retail industries. Serving at the executive level, she has recently focused on the implementation of eCommerce, Data Warehouse, Customer Relationship Management, Business Intelligence, and Web-to-Legacy Integration strategies and solutions.",
+      image: "/team/janice.jpg"
+    },
+    {
+      name: "Steven C. Patchet",
+      role: "Vice President, Consulting Services",
+      bio: "Mr. Patchet has over twenty years of experience in information technology management and enterprise integration of diverse computer systems for the utilities industry and public sector. He has expertise in leading the integration of large and complex systems in the utilities industry. Among his accomplishments, his background includes serving as a state agency CIO to develop and implement organizational strategy.",
+      image: "/team/steven.jpg"
+    },
+    {
+      name: "Dr. Afolabi Mabogunje",
+      role: "Managing Director, Chief Operating Officer",
+      bio: "Dr. Afolabi Mabogunje is the Managing Director and Chief Operating Officer of Upland, Nigeria. He is a pro-active business and technology strategist with over 20 years of experience in telecommunications, defense research, and public sector organizations. He has delivered solutions across geographically distributed multi-platform systems, led customer engagements, and managed multi-disciplinary business units, 3rd party suppliers, and business strategies.",
+      image: "/team/afolabi.jpg"
+    },
+    {
+      name: "Ms. Ronke Aiyelabola",
+      role: "Vice President, Consulting Services",
+      bio: "Ms. Ronke Aiyelabola is the Finance Director of Upland, Nigeria. She has garnered vast experience spanning a decade in financial management functions, including accounting, auditing, taxation, and treasury management. She is an Associate Member of the Institute of Chartered Accountants of Nigeria.",
+      image: "/team/thumbnail-female.jpg"
+    },
+    {
+      name: "Joe Brown",
+      role: "General Manager, Projects and New Business",
+      bio: "Joe Brown is the General Manager, Projects and New Business of Upland Nigeria. He is a dynamic and resourceful manager with over 20 years of experience in the oil & gas and manufacturing sectors. He holds a Bachelor of Engineering degree from the University of Port Harcourt and a Master of Engineering degree from the University of Benin, Nigeria. He has extensive experience in telecommunication facility planning, deployment, and management, is a member of the Institute of Electrical and Electronic Engineers (MIEEE), USA, and a registered Engineer with the Council for the Regulation of Engineering in Nigeria (COREN).",
+      image: "/team/joe.jpg"
+    },
+    {
+      name: "Waheed Olanipekun",
+      role: "General Manager, Projects and Network Support",
+      bio: "Waheed Olanipekun is the General Manager, Projects and Network Support. He is a Network Engineer with over 13 years of experience in Network Design and Administration, Terrestrial and Satellite Communication Systems, and Project Management. He holds a Bachelor of Engineering Degree from the University of Ilorin and a Master of Business Administration (MBA) from the University of Lagos. Waheed is a certified Cisco, Juniper, and Microsoft Network Engineer with diverse experience in the Telecoms and Oil & Gas industries.",
+      image: "/team/waheed.jpg"
     },
   ];
 
@@ -229,6 +260,9 @@ export default function AboutPage() {
           </div>
         </SectionWrapper>
 
+
+        <OurPurposeApproachSection />
+
         {/* Leadership Section */}
         <SectionWrapper className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -243,25 +277,67 @@ export default function AboutPage() {
               </div>
             </FadeInUp>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-8">
+            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {leadership.map((leader, index) => (
-                <ScaleIn key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-200">
-                  <div className="aspect-square w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                <ScaleIn key={index} className="h-full group relative">
+                  {/* Banner Effect */}
+                  <div className="absolute -top-2 -left-2 -right-2 h-2 bg-gradient-to-r from-[#132A4D] via-[#1e3a5f] to-[#132A4D] rounded-t-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  
+                  {/* Before/After Flow Lines */}
+                  <div className="absolute -left-4 top-1/2 w-1 h-0 bg-gradient-to-b from-transparent via-[#132A4D] to-transparent group-hover:h-16 transition-all duration-700 delay-100"></div>
+                  <div className="absolute -right-4 top-1/2 w-1 h-0 bg-gradient-to-b from-transparent via-[#132A4D] to-transparent group-hover:h-16 transition-all duration-700 delay-200"></div>
+                  
+                  {/* Main Card */}
+                  <div className="relative bg-white h-full rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 border border-gray-100 group-hover:border-[#132A4D]/20 overflow-hidden">
+                    {/* Attachment-like Elements */}
+                    <div className="absolute top-4 right-4 w-3 h-3 bg-[#132A4D] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-200"></div>
+                    <div className="absolute top-8 right-4 w-2 h-2 bg-[#1e3a5f] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-300"></div>
+                    <div className="absolute top-12 right-4 w-1 h-1 bg-[#2a4a6b] rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 delay-400"></div>
+                    
+                    {/* Animated Background Pattern */}
+                    <div className="absolute inset-0 group-hover:opacity-5 transition-opacity duration-500">
+                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#132A4D]/10 via-transparent to-[#1e3a5f]/10"></div>
+                      {/* Subtle accent pattern */}
+                      <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-[#132A4D]/5 to-transparent rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300"></div>
+                    </div>
+                    
+                    {/* Profile Image with Enhanced Effects */}
+                    <div className="relative aspect-square w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-500">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#132A4D]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <ImageSection
                       src={leader.image}
                       alt={leader.name}
-                      className="w-full h-full object-cover"
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
+                      {/* Glow Effect */}
+                      <div className="absolute inset-0 rounded-full shadow-lg shadow-[#132A4D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif text-center">
+                    
+                    {/* Content with Enhanced Typography */}
+                    <div className="relative z-10">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif text-center group-hover:text-[#132A4D] transition-colors duration-300">
                     {leader.name}
                   </h3>
-                  <p className="text-[#132A4D] font-semibold text-center mb-4">
+                      <div className="relative">
+                        <p className="text-[#132A4D] font-semibold text-center mb-4 group-hover:scale-105 transition-transform duration-300">
                     {leader.role}
                   </p>
-                  <p className="text-gray-600 text-center leading-relaxed">
+                        {/* Underline Effect */}
+                        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#132A4D] to-[#1e3a5f] group-hover:w-16 transition-all duration-500"></div>
+                      </div>
+                      <p className="text-gray-900 text-center leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                     {leader.bio}
                   </p>
+                    </div>
+                    
+                    {/* Corner Accent */}
+                    <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[20px] border-l-transparent border-b-[20px] border-b-[#132A4D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute bottom-0 right-0 w-0 h-0 border-l-[15px] border-l-transparent border-b-[15px] border-b-[#1e3a5f]/15 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100"></div>
+                    
+                    {/* Floating Elements on Hover */}
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 border border-[#132A4D]/10 rounded-full scale-150 transition-all duration-700 delay-100"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-[#1e3a5f]/10 rounded-full scale-200 transition-all duration-700 delay-200"></div>
+                  </div>
                 </ScaleIn>
               ))}
             </StaggerContainer>

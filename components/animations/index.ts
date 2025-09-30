@@ -9,3 +9,4 @@ export { default as SlideInFromRight } from './SlideInFromRight';
 export { default as SectionWrapper } from './SectionWrapper';
 export { default as TypewriterText } from './TypewriterText';
 export { default as TypewriterMultiLine } from './TypewriterMultiLine';
+export { default as CardStackAnimation } from './CardStackAnimation';

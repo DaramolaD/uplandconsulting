@@ -1,11 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import ImageSection from "@/components/ui/ImageSection";
+import ImageCarousel from "@/components/ui/ImageCarousel";
 import SectionTag from "@/components/sections/SectionTag";
 import { FadeInUp, ScaleIn } from "@/components/animations";
-import heroBg from "@/public/heroBg.png"
+import heroBg from "@/public/utiliesBg.jpg"
+import oilBg from "@/public/oil.jpg"
+import constructionBg2 from "@/public/consructionBg_2.jpg"
+import containerBg from "@/public/containerBg.jpg"
 
 export default function HeroSection() {
+  // Sample images for the carousel - you can replace these with your actual images
+  const heroImages = [
+    {
+      src: heroBg,
+      alt: "Professional Business Meeting"
+    },
+    {
+      src: oilBg, // Replace with your second image
+      alt: "Strategic Planning Session"
+    },
+    {
+      src: constructionBg2, // Replace with your third image
+      alt: "Executive Team Collaboration"
+    },
+    {
+      src: containerBg, // Replace with your third image
+      alt: "Executive Team Collaboration"
+    }
+  ];
+
   return (
     <section className="overflow-hidden relative lg:min-h-screen flex flex-col lg:flex-row">
       {/* Left side - Dark blue background with content */}
@@ -22,7 +45,7 @@ export default function HeroSection() {
             
             {/* Main title */}
             <FadeInUp delay={0.4}>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-white mb-8 font-serif">
+              <h1 className="text-3xl md:text-4xl lg:text-[42px] xl:text-[42px] 2xl:text-5xl font-medium leading-tight text-white mb-8 font-serif">
                 Executive-Level Strategy & Technology Solutions for Oil & Gas, Utilities, and Public Sector
               </h1>
             </FadeInUp>
@@ -48,13 +71,12 @@ export default function HeroSection() {
         </div>
       </div>
       
-      {/* Right side - Image section */}
-      <ScaleIn delay={0.3} className="w-full lg:w-1/2 relative h-96 lg:h-auto">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-blue-800/20" />
-        <ImageSection
-          src={heroBg}
-          alt="Professional Business Meeting"
+      {/* Right side - Image carousel */}
+      <ScaleIn delay={0.3} className="w-full lg:w-1/2 relative h-96 lg:h-screen">
+        <ImageCarousel
+          images={heroImages}
           className="h-full"
+          interval={3500} // 4 seconds between transitions
         />
       </ScaleIn>
     </section>

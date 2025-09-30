@@ -6,4 +6,6 @@ export { default as OurImpactSection } from './OurImpactSection';
 export { default as WhoWeAreSection } from './WhoWeAreSection';
 export { default as IndustriesWeServeSection } from './IndustriesWeServeSection';
 export { default as TestimonialsSection } from './TestimonialsSection';
+export { default as OurPurposeApproachSection } from './OurPurposeApproachSection';
+export { default as EnhancedServicesSection } from './EnhancedServicesSection';
 

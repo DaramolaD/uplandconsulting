@@ -1,12 +1,37 @@
 import SectionHeader from "@/components/sections/SectionHeader";
 import { FadeInUp, StaggerContainer, ScaleIn, SectionWrapper } from "@/components/animations";
+import CountUp from "@/components/ui/CountUp";
 
 export default function OurImpactSection() {
   const stats = [
-    { number: "15+", label: "Years Experience" },
-    { number: "200+", label: "Projects Delivered" },
-    { number: "50+", label: "Client Organizations" },
-    { number: "99%", label: "Client Satisfaction" },
+    { 
+      end: 15, 
+      suffix: "+", 
+      label: "Years Experience",
+      duration: 2000,
+      delay: 0
+    },
+    { 
+      end: 200, 
+      suffix: "+", 
+      label: "Projects Delivered",
+      duration: 2500,
+      delay: 200
+    },
+    { 
+      end: 50, 
+      suffix: "+", 
+      label: "Client Organizations",
+      duration: 1800,
+      delay: 400
+    },
+    { 
+      end: 99, 
+      suffix: "%", 
+      label: "Client Satisfaction",
+      duration: 2200,
+      delay: 600
+    },
   ];
 
   const achievements = [
@@ -50,18 +75,23 @@ export default function OurImpactSection() {
         </FadeInUp>
 
         {/* Stats Grid */}
-                 <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-           {stats.map((stat, index) => (
-             <ScaleIn key={index} className="text-center">
-               <div className="text-4xl md:text-5xl font-bold text-[#132A4D] mb-2 font-serif">
-                 {stat.number}
-               </div>
-               <div className="text-lg text-gray-600">
-                 {stat.label}
-               </div>
-             </ScaleIn>
-           ))}
-         </StaggerContainer>
+        <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
+          {stats.map((stat, index) => (
+            <ScaleIn key={index} className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-[#132A4D] mb-2 font-serif">
+                <CountUp
+                  end={stat.end}
+                  suffix={stat.suffix}
+                  duration={stat.duration}
+                  delay={stat.delay}
+                />
+              </div>
+              <div className="text-lg text-gray-600">
+                {stat.label}
+              </div>
+            </ScaleIn>
+          ))}
+        </StaggerContainer>
 
         {/* Achievements */}
         <FadeInUp delay={0.4}>
