@@ -343,7 +343,7 @@ export default function ServicesPage() {
             </FadeInUp>
 
             <StaggerContainer className="space-y-16">
-              {services.map((service, index) => {
+              {services.slice(0, 6).map((service, index) => {
                 const IconComponent = service.icon;
                 const colorClasses = getColorClasses(service.color);
                 

@@ -247,7 +247,7 @@ export default function EnhancedServicesSection() {
 
         {/* Comprehensive Solutions with Alternating Layout */}
         <div className="space-y-20">
-          {serviceCategories.map((category, index) => {
+          {serviceCategories.slice(0, 6).map((category, index) => {
             const IconComponent = category.icon;
             const colorClasses = getColorClasses(category.color);
             const isEven = index % 2 === 0;
