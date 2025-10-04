@@ -94,7 +94,7 @@ export default function OurImpactSection() {
         </StaggerContainer>
 
         {/* Achievements */}
-        <FadeInUp delay={0.4}>
+        <FadeInUp delay={0.3}>
           <div className="text-center mb-12">
             <h3 className="text-2xl font-bold text-gray-900 mb-4 font-serif">
               Key Achievements
