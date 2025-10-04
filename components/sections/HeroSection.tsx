@@ -34,24 +34,24 @@ export default function HeroSection() {
       {/* Left side - Dark blue background with content */}
       
       <div className="w-full lg:w-1/2 flex items-center" style={{ backgroundColor: '#132A4D' }}>
-        <div className="flex lg:justify-end w-full px-8 lg:px-16 pt-40 pb-10">
+        <div className="flex lg:justify-end w-full px-4 md:px-8 lg:px-16 pt-40 pb-10">
           <div className="max-w-2xl">
             {/* Small heading */}
-            <FadeInUp delay={0.2}>
+            <FadeInUp delay={0.15}>
               <SectionTag variant="default">
                 Trusted Advisors for High-Stakes Industries
               </SectionTag>
             </FadeInUp>
             
             {/* Main title */}
-            <FadeInUp delay={0.4}>
+            <FadeInUp delay={0.3}>
               <h1 className="text-3xl md:text-4xl lg:text-[42px] xl:text-[42px] 2xl:text-5xl font-medium leading-tight text-white mb-8 font-serif">
                 Executive-Level Strategy & Technology Solutions for Oil & Gas, Utilities, and Public Sector
               </h1>
             </FadeInUp>
             
             {/* Description */}
-            <FadeInUp delay={0.6}>
+            <FadeInUp delay={0.5}>
               <p className="text-lg md:text-xl font-sans font-light text-white opacity-70 leading-relaxed mb-10">
                 Fast-tracking complex projects, minimizing risk, and delivering operational excellence.
               </p>
@@ -72,7 +72,7 @@ export default function HeroSection() {
       </div>
       
       {/* Right side - Image carousel */}
-      <ScaleIn delay={0.3} className="w-full lg:w-1/2 relative h-96 lg:h-screen">
+      <ScaleIn delay={0.3} className="w-full lg:w-1/2 relative h-[500px] lg:h-screen">
         <ImageCarousel
           images={heroImages}
           className="h-full"

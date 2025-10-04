@@ -230,7 +230,7 @@ export default function EnhancedServicesSection() {
     <SectionWrapper className="overflow-hidden pt-20 pb-24 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Header Section */}
-        <FadeInUp delay={0.2}>
+        <FadeInUp delay={0.05}>
           <div className="text-center mb-16">
             <div className="inline-block bg-[#132A4D] text-white px-6 py-3 rounded-lg font-medium text-lg mb-8">
               Comprehensive Solutions
@@ -259,8 +259,8 @@ export default function EnhancedServicesSection() {
               <div key={category.id} className="group">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Content Side */}
-                    <div className={`${isEven ? 'lg:pr-8' : 'lg:pl-8'} ${isEven ? 'order-2' : 'order-1'}`}>
-                      <AnimationComponent delay={0.2}>
+                    <div className={`${isEven ? 'lg:pr-8' : 'lg:pl-8'} ${isEven ? 'md:order-2' : 'order-1'}`}>
+                      <AnimationComponent delay={0.05}>
                         <div className="flex items-center mb-6">
                           <div className={`p-4 rounded-xl bg-gradient-to-r ${colorClasses} text-white mr-6 group-hover:scale-110 transition-transform duration-300`}>
                             <IconComponent className="h-8 w-8" />
@@ -301,7 +301,7 @@ export default function EnhancedServicesSection() {
                     </div>
 
                     {/* Image Side */}
-                    <div className={`h-full ${isEven ? 'lg:pl-8' : 'lg:pr-8'} ${isEven ? 'order-1' : 'order-2'}`}>
+                    <div className={`h-full ${isEven ? 'lg:pl-8' : 'lg:pr-8'} ${isEven ? 'md:order-1' : 'order-2'}`}>
                       <ImageAnimationComponent delay={0.4} className="h-full">
                         <div className="relative h-full group-hover:scale-103 transition-transform duration-500">
                           <div className="absolute scale-102 inset-0 bg-gradient-to-br from-[#132A4D]/10 to-[#1e3a5f]/10 rounded-2xl transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>

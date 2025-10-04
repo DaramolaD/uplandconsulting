@@ -289,30 +289,30 @@ export default function ServicesPage() {
           __html: JSON.stringify(servicesPageStructuredData)
         }}
       />
-      <main className="overflow-hidden min-h-screen">
+      <main className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center" style={{ backgroundColor: '#132A4D' }}>
+        <section className="relative flex items-center" style={{ backgroundColor: '#132A4D' }}>
           <div className="container mx-auto py-40 px-4 relative z-10">
             <div className="max-w-5xl mx-auto text-center text-white">
-              <FadeInUp delay={0.2}>
+              <FadeInUp delay={0}>
                 <SectionTag variant="default">
                   Comprehensive Business Solutions
                 </SectionTag>
               </FadeInUp>
               
-              <FadeInUp delay={0.4}>
+              <FadeInUp delay={0.1}>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-8 font-serif leading-tight">
                   Strategic Services for High-Stakes Industries
                 </h1>
               </FadeInUp>
               
-              <FadeInUp delay={0.6}>
+              <FadeInUp delay={0.2}>
                 <p className="text-base md:text-xl lg:text-2xl text-white/80 leading-relaxed mb-10 max-w-5xl mx-auto">
                   From market expansion to compliance excellence, we provide the strategic guidance and technical expertise your organization needs to thrive in complex, regulated environments.
                 </p>
               </FadeInUp>
               
-              <FadeInUp delay={0.8}>
+              <FadeInUp delay={0.3}>
                 <Button
                   size="lg"
                   className="bg-white hover:bg-gray-100 text-[#132A4D] px-8 py-4 text-lg font-semibold rounded-lg transition-colors duration-200"
@@ -328,7 +328,7 @@ export default function ServicesPage() {
         {/* Core Services Section */}
         <SectionWrapper className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <FadeInUp delay={0.2}>
+            <FadeInUp delay={0.05}>
               <div className="text-center mb-16">
                 <div className="inline-block bg-[#EBEBEB] text-gray-900 px-6 py-3 rounded-lg font-medium text-lg mb-8">
                   Our Core Services

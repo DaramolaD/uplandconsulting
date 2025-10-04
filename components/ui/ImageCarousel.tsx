@@ -41,7 +41,9 @@ export default function ImageCarousel({
       
       if (isVisible) {
         const scrolled = window.pageYOffset;
-        const parallax = scrolled * 0.5;
+        // Apply parallax only for tablet and larger screens (768px and up)
+        const isTabletOrLarger = window.innerWidth >= 768;
+        const parallax = isTabletOrLarger ? scrolled * 0.5 : 0;
         containerRef.current.style.transform = `translateY(${parallax}px)`;
       }
     };
