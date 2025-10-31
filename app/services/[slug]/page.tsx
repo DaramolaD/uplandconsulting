@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import SectionHeader from "@/components/sections/SectionHeader";
+// import SectionHeader from "@/components/sections/SectionHeader";
 import ImageSection from "@/components/ui/ImageSection";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowRight,
+  // ArrowRight,
   CheckCircle,
   ArrowLeft,
   Phone,
   Mail,
-  MapPin,
+  // MapPin,
 } from "lucide-react";
 import { FadeInUp, SectionWrapper } from "@/components/animations";
 import Link from "next/link";

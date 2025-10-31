@@ -330,7 +330,7 @@ export default function NigeriaPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
               {achievements.map((achievement, index) => (
                 <FadeInUp key={index} delay={index * 0.1}>
-                  <div className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start">
+                  <div className="bg-white h-full rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start">
                     <CheckCircle className="h-6 w-6 text-[#132A4D] mr-4 flex-shrink-0 mt-1" />
                     <p className="text-gray-700 leading-relaxed">{achievement}</p>
                   </div>

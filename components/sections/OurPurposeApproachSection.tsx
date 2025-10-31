@@ -1,6 +1,6 @@
 import SectionHeader from "@/components/sections/SectionHeader";
 import { FadeInUp, SectionWrapper } from "@/components/animations";
-import { Target, Lightbulb, ChevronRight, Building2, Handshake, TrendingUp } from "lucide-react";
+import { Target, Lightbulb, Building2, Handshake, TrendingUp } from "lucide-react";
 
 export default function OurPurposeApproachSection() {
   const purposePoints = [

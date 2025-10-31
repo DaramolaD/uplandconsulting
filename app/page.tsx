@@ -7,10 +7,10 @@ import {
   WhoWeAreSection,
   IndustriesWeServeSection,
   TestimonialsSection,
-  OurPurposeApproachSection,
+  // OurPurposeApproachSection,
   EnhancedServicesSection,
 } from "@/components/sections";
-import CoreServicesSection from "@/components/sections/CoreServicesSection";
+// import CoreServicesSection from "@/components/sections/CoreServicesSection";
 
 export default function Home() {
   return (
