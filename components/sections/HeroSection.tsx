@@ -38,7 +38,7 @@ export default function HeroSection() {
           <div className="max-w-2xl">
             {/* Small heading */}
             <FadeInUp delay={0.15}>
-              <SectionTag variant="default">
+              <SectionTag variant="default" className="!text-xs">
                 Trusted Advisors for High-Stakes Industries
               </SectionTag>
             </FadeInUp>

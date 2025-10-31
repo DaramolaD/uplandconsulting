@@ -103,7 +103,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <Link
-                    href="/#about"
+                    href="/about"
                     className="text-gray-300 hover:text-white transition"
                   >
                     About Us
@@ -111,7 +111,15 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/#contact"
+                    href="/nigeria"
+                    className="text-gray-300 hover:text-white transition"
+                  >
+                    Nigeria Operations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
                     className="text-gray-300 hover:text-white transition"
                   >
                     Contact
