@@ -340,65 +340,6 @@ export default function NigeriaPage() {
           </div>
         </SectionWrapper>
 
-        {/* Leadership Section */}
-        <SectionWrapper className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <FadeInUp delay={0.2}>
-              <div className="text-center mb-16">
-                <SectionHeader variant="dark">
-                  Nigeria Leadership Team
-                </SectionHeader>
-                <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
-                  Meet the experienced leaders who guide our Nigeria operations and work directly with our clients across West Africa.
-                </p>
-              </div>
-            </FadeInUp>
-
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {nigeriaLeadership.map((leader, index) => (
-                <ScaleIn key={index} className="h-full group relative">
-                  {/* Banner Effect */}
-                  <div className="absolute -top-2 -left-2 -right-2 h-2 bg-gradient-to-r from-[#132A4D] via-[#1e3a5f] to-[#132A4D] rounded-t-lg opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                  
-                  {/* Main Card */}
-                  <div className="relative bg-white h-full rounded-lg p-6 shadow-lg hover:shadow-2xl transition-all duration-500 group-hover:scale-105 group-hover:-translate-y-2 border border-gray-100 group-hover:border-[#132A4D]/20 overflow-hidden">
-                    {/* Animated Background Pattern */}
-                    <div className="absolute inset-0 group-hover:opacity-5 transition-opacity duration-500">
-                      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-[#132A4D]/10 via-transparent to-[#1e3a5f]/10"></div>
-                    </div>
-                    
-                    {/* Profile Image */}
-                    <div className="relative aspect-square w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden group-hover:scale-110 transition-transform duration-500">
-                      <ImageSection
-                        src={leader.image}
-                        alt={leader.name}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 rounded-full shadow-lg shadow-[#132A4D]/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    </div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 font-serif text-center group-hover:text-[#132A4D] transition-colors duration-300">
-                        {leader.name}
-                      </h3>
-                      <div className="relative">
-                        <p className="text-[#132A4D] font-semibold text-center mb-4 group-hover:scale-105 transition-transform duration-300">
-                          {leader.role}
-                        </p>
-                        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#132A4D] to-[#1e3a5f] group-hover:w-16 transition-all duration-500"></div>
-                      </div>
-                      <p className="text-gray-900 text-center leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                        {leader.bio}
-                      </p>
-                    </div>
-                  </div>
-                </ScaleIn>
-              ))}
-            </StaggerContainer>
-          </div>
-        </SectionWrapper>
-
         {/* Office Information Section */}
         <SectionWrapper id="our-nigeria-office" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
