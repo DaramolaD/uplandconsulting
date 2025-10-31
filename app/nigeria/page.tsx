@@ -126,7 +126,7 @@ export default function NigeriaPage() {
     country: "Nigeria",
     address: "Lagos, Nigeria",
     phone: "+234 (0) 1 234 5678",
-    email: "nigeria@uplandconsulting.com",
+    email: "clientservices@uplandconsulting.com",
     region: "West Africa"
   };
 
@@ -187,16 +187,22 @@ export default function NigeriaPage() {
                   <Button
                     size="lg"
                     className="bg-white hover:bg-gray-100 text-[#132A4D] px-8 py-4 text-lg font-semibold rounded-lg"
+                    asChild
                   >
-                    Contact Our Team
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <a href="#our-nigeria-office">
+                      Contact Our Team
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </a>
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
                     className="bg-transparent text-white hover:text-[#132A4D] border-white hover:bg-white px-8 py-4 text-lg font-semibold rounded-lg"
+                    asChild
                   >
-                    View Our Services
+                    <a href="#core-capabilities">
+                      View Our Services
+                    </a>
                   </Button>
                 </div>
               </FadeInUp>
@@ -269,7 +275,7 @@ export default function NigeriaPage() {
         </SectionWrapper>
 
         {/* Capabilities Section */}
-        <SectionWrapper className="py-20 bg-white">
+        <SectionWrapper id="core-capabilities" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <FadeInUp delay={0.2}>
               <div className="text-center mb-16">
@@ -394,7 +400,7 @@ export default function NigeriaPage() {
         </SectionWrapper>
 
         {/* Office Information Section */}
-        <SectionWrapper className="py-20 bg-gray-50">
+        <SectionWrapper id="our-nigeria-office" className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <FadeInUp delay={0.2}>
               <div className="text-center mb-16">
@@ -473,16 +479,22 @@ export default function NigeriaPage() {
                 <Button
                   size="lg"
                   className="bg-white hover:bg-gray-100 text-[#132A4D] px-8 py-4 text-lg font-semibold rounded-lg"
+                  asChild
                 >
-                  Contact Our Team
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <a href="#our-nigeria-office">
+                    Contact Our Team
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
                   className="bg-transparent text-white hover:text-[#132A4D] px-8 py-4 text-lg font-semibold rounded-lg border-white hover:bg-white"
+                  asChild
                 >
-                  View Our Services
+                  <a href="#core-capabilities">
+                    View Our Services
+                  </a>
                 </Button>
               </div>
             </FadeInUp>

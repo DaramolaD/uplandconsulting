@@ -11,6 +11,7 @@ interface SectionWrapperProps {
   duration?: number;
   once?: boolean;
   threshold?: number;
+  id?: string;
 }
 
 /**
@@ -23,11 +24,13 @@ export default function SectionWrapper({
   delay = 0,
   duration = 0.8,
   once = true,
-  threshold = 0.1
+  threshold = 0.1,
+  id
 }: SectionWrapperProps) {
   return (
-    <ReducedMotion fallback={<section className={className}>{children}</section>}>
+    <ReducedMotion fallback={<section id={id} className={className}>{children}</section>}>
       <motion.section
+        id={id}
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once, amount: threshold }}
